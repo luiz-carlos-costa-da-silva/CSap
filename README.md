@@ -1,7 +1,9 @@
 # Projeto CSap
 
-É um projeto, escrito em C#, desenvolvido para a automatização de algumas transações do SAP GUI.
+É um projeto, escrito em **C#**, desenvolvido para a automatização de algumas transações do SAP GUI.
 Por enquanto está em fase de desenvolvimento.
+
+**Obs.:** Esse projeto só funciona em Windows.
 
 ## Requisito(s)
 
