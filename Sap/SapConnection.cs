@@ -14,7 +14,7 @@ public class SapConnection
     /// <summary>Armazena a sessão SAP GUI atual</summary>
     public object? SapCurrentSession { get; set; }
 
-    /// <summary>Armazena todas as sessões abertas no SAP Gui</summary>
+    /// <summary>Armazena todas as sessões abertas no SAP GUI</summary>
     public List<object>? SapSessions { get; set; }
 
     public SapConnection()
@@ -26,20 +26,20 @@ public class SapConnection
         this.SapSessions = new List<object>();
     }
 
-    /// <summary>Executa o(s) método(s)</summary>
+    /// <summary>Executa método SAP GUI Script</summary>
     public dynamic? InvokeMethod(object? target, string methodName, object[]? methodParams = null)
     {
         return target?.GetType()
             .InvokeMember(methodName, BindingFlags.InvokeMethod, null, target, methodParams);
     }
 
-    /// <summary>Obtém a(s) propriedade(s)</summary>
+    /// <summary>Obtém propriedade SAP GUI Script</summary>
     public dynamic? GetProperty(object? target, string propertyName, object[]? propertyParams = null)
     {
         return target?.GetType()
             .InvokeMember(propertyName, BindingFlags.GetProperty, null, target, propertyParams);
     }
-    /// <summary>Defini a(s) propriedade(s)</summary>
+    /// <summary>Defini propriedade SAP GUI Script</summary>
     public dynamic? SetProperty(object? target, string propertyName, object[]? propertyParams = null)
     {
         return target?.GetType()
